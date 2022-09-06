@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import bodyParser from "body-parser";
 import InitiateMongoServer from "./config/db.js";
 import userRouter from "./routes/user.js";
@@ -12,6 +13,8 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(bodyParser.json());
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.json({ message: "API is up and running!" });
