@@ -5,6 +5,7 @@ import InitiateMongoServer from "./config/db.js";
 import userRouter from "./routes/user.js";
 import planRouter from "./routes/plan.js";
 import subRouter from "./routes/subscription.js";
+import stripeRouter from "./routes/stripe.js";
 
 InitiateMongoServer();
 
@@ -28,6 +29,9 @@ app.use("/plans", planRouter);
 
 // Subscription Routes
 app.use("/subscriptions", subRouter);
+
+// Stripe Routes
+app.use("/stripe", stripeRouter);
 
 app.listen(PORT, (req, res) => {
   console.log(`Server Started at Port ${PORT}`);
