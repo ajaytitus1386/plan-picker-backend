@@ -39,4 +39,14 @@ stripeRouter.post("/create", async (req, res) => {
   }
 });
 
+stripeRouter.post("/cancel", async (req, res) => {
+  const { subscriptionId } = req.body;
+  try {
+    const deletedSub = await stripe.subscriptions.del(subscriptionId);
+    res.json({ deletedSub, message: "Success" });
+  } catch (error) {
+    return res.status(400).send({ error: { message: error.message } });
+  }
+});
+
 export default stripeRouter;
