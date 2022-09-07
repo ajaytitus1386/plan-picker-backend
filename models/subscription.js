@@ -25,15 +25,7 @@ const SubscriptionSchema = mongoose.Schema({
     type: Boolean,
     required: true,
   },
-  creditCardNumber: {
-    type: String,
-    required: true,
-  },
-  creditCardExpiry: {
-    type: String,
-    required: true,
-  },
-  creditCardCvv: {
+  stripeSubId: {
     type: String,
     required: true,
   },

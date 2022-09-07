@@ -26,9 +26,7 @@ subRouter.post(
       startDate,
       endDate,
       isActive = true,
-      creditCardNumber,
-      creditCardExpiry,
-      creditCardCvv,
+      stripeSubId,
     } = req.body;
 
     try {
@@ -55,9 +53,7 @@ subRouter.post(
         startDate,
         endDate,
         isActive,
-        creditCardNumber,
-        creditCardExpiry,
-        creditCardCvv,
+        stripeSubId,
       });
 
       await sub.save();
