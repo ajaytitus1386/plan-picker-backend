@@ -35,7 +35,9 @@ npm install
 npm start
 ```
 
-Or better yet just use the deployed API at `https://richpanel-task-backend.herokuapp.com/`
+### Or better yet just use the deployed API at [https://richpanel-task-backend.herokuapp.com/](https://richpanel-task-backend.herokuapp.com/)
+
+Also check out the frontend web app at [https://github.com/ajaytitus1386/richpanel-task-frontend](https://github.com/ajaytitus1386/richpanel-task-frontend)
 
 ## :mag: Salient Features
 
